@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+{% load humanize %}
+
+
+
+{% block title %} Home {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+<script>
+$('.nav-item a').removeClass('active');
+$('.home-item a').addClass('active');
+</script>
+
+<!-- Sortable Tables -->
+<script defer src="/static/assets/js/sorttable.js"></script>
+
+<!-- Plotly.js CDN -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.54.6/plotly.min.js"></script>
+
+<!-- Load and display data -->
+<script defer src="/static/assets/js/home.js"></script>
+{% endblock javascripts %}

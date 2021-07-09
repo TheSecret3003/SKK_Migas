@@ -1,0 +1,49 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}  
+<div class="container-fluid">
+  <h2>List of Keywords</h2>
+  <div class="row">
+    <div class="col-xl-12 mb-5 mb-xl-0">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <!-- cases table -->
+            <div class= "center-button">
+              <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+             </div>
+            <table id="keywords_table" class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Keywords</th>
+                </tr>
+              </thead>
+              <tbody id="keywords_table_body"></tbody>
+            </table>
+          </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer clearfix">
+          <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Submit</a>
+          <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">Export to Excel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+<script>
+  $('.nav-item a').removeClass('active');
+  $('.home-item a').addClass('active');
+  </script>
+  
+  <!-- Sortable Tables -->
+  <script defer src="/static/assets/js/sorttable.js"></script>
+  <!-- Load and display data -->
+  <script defer src="/static/assets/js/keyword.js"></script>
+  <script defer src="/static/assets/js/papaparse.min.js"></script>
+{% endblock javascripts %}
